@@ -1,0 +1,30 @@
+docker build -t <YOUR_DOCKER_USERNAME>/kubernetes-spring-mysql-demo:1.0 .
+
+ docker push mnshakib/kubernetes-spring-mysql-demo:1.0
+
+ kubectl apply -f mysql-configmap.yaml
+
+ echo -n '<YOUR_NEW_PASSWORD>' | base64----(windows)[Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('<YOUR_NEW_PASSWORD>'))
+echo -n 'cGFzc0B3b3JkMQ==' | base64----(windows)[Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('pass@word1'))
+ kubectl apply -f secrets.yaml
+
+ kubectl apply -f mysql-deployment.yaml
+
+ kubectl get all
+
+
+
+ kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=mnshakib --docker-password=Animekei@123 --docker-email=mnshakib79@gmail.com
+
+ kubectl apply -f app-deployment.yaml
+
+ kubectl get svc demo-app-mysql
+
+ kubectl get pods
+
+ kubectl logs demo-app-spring-7d98b98498-bgdtt
+
+ kubectl port-forward svc/demo-app-spring 9090:8080
+
+kubectl delete deployments --all -n default
+kubectl delete deployments --all --all-namespaces
